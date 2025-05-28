@@ -1,0 +1,102 @@
+.achievements-section {
+  background-color: #0d1117;
+  padding: 100px 20px;
+  color: #c9d1d9;
+  text-align: center;
+}
+
+.achievements-section h2 {
+  color: #58a6ff;
+  font-size: 32px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.achievements-section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 10px auto 0;
+  background-color: #58a6ff;
+  border-radius: 2px;
+}
+
+.timeline {
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #58a6ff;
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 60px;
+  text-align: left;
+
+  /* Animation setup */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.timeline-item.fade-in-up {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.timeline-date {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+  color: #58a6ff;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.timeline-content h3 {
+  margin: 0 0 8px 0;
+  color: #58a6ff;
+  font-size: 20px;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 16px;
+  color: #c9d1d9;
+  line-height: 1.4;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .timeline {
+    padding-left: 10px;
+  }
+
+  .timeline-item {
+    padding-left: 40px;
+  }
+
+  .timeline-date {
+    font-size: 12px;
+  }
+
+  .timeline-content h3 {
+    font-size: 18px;
+  }
+}
